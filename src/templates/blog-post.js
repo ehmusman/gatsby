@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Head from "../components/head"
 
 export const query = graphql`
   query($slug: String!){
@@ -29,6 +30,7 @@ const BlogPostTemplate = (props) => {
   return (
     <Layout >
       <>
+        <Head title={title} />
         <h1>Title: {title}</h1>
         <h4>Sub Title: {subtitle}</h4>
         <small>Author: {author}</small>

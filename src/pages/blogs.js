@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { graphql, Link, useStaticQuery } from "gatsby"
+import Head from '../components/head'
 
 const Blogs = () => {
   const height = {
@@ -33,6 +34,7 @@ const Blogs = () => {
     `)
   return (
     <Layout>
+      <Head title="Blogs" />
       <div className="row">
 
         {data.allContentfulBlogPost.edges.map(edge => (
